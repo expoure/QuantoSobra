@@ -1,0 +1,13 @@
+A.
+1) Será retornado a linha da tabela que coincide com a id 1, ou seja: id|joao|26. 
+2) Uma nova linha seria adicionada com o nome de "maria" e idade 30. A id seria auto implement. OBS: Isso se o
+problema exposto na questão B tiver sido resolvido, caso contrário retornará "not found".
+3) Será retornado todas as linhas onde a coluna "name" coincide com o nome configurado, no caso "maria". 
+Então seria retornado duas linhas, a que já estava inclusa previamente e a adicionada no exercício anterior.
+
+B. Primeiramente deve-se alterar o "return​ ​getPersonData​(request.queryParams)" para "return​ ​setPersonData​(request.queryParams)"
+onde  o "request.method" é igual a "POST". Agora sim o método POST irá funcionar corretamente. Suponhamos, entretanto, que
+um erro ocorra na execução do método POST. O método "setPersonData" irá fazer um "return​ ​“Success”" sem verificar se de fato a
+query executou corretamente. Uma das soluçoes é salvar o retorno de "execute query INSERT..." em uma variável, por exemplo, como 
+no método "getPersonData", com o nome "queryResult". Substuimos o enganoso "Sucess" retornado pela variável que contém o retorno 
+da função. Dependendo do tipo de retorno pode-se aplicar outros métodos para que fique mais detalhado ao usuário.
